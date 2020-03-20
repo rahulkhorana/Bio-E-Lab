@@ -13,12 +13,11 @@ from scipy.optimize import curve_fit
 
 
 with open('2018-07-02 and 07-09.xlsx - Sheet2.csv', newline='') as csvfile:
-reader = csv.reader(csvfile)
-
-for row in reader:
-    print(type(row), [type(item) for item in row])
-    print(', '.join(row))
-
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(type(row), [type(item) for item in row])
+        print(', '.join(row))
+        
 def func(x, a, b, c):
     return a * np.exp(-b * x) +c
 
